@@ -60,7 +60,7 @@ started this blog, because I thought it would be fun to document the whole
 process, maybe some fortunate soul will learn from my mistakes.
 * Emacs :@emacs:
 Emacs gang where you at?
-** DONE Yet another praise for Doom :emacs:
+** TODO Yet another praise for Doom :emacs:
 :PROPERTIES:
 :EXPORT_FILE_NAME: yet-another-praise-for-doom
 :EXPORT_DATE: 2020-05-14
