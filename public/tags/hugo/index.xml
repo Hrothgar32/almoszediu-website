@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>hugo - Tag - Álmos Zediu</title>
+        <link>http://example.org/tags/hugo/</link>
+        <description>hugo - Tag - Álmos Zediu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 14 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Beginning this whole Hugo thing</title>
+    <link>http://example.org/posts/beginning-this-hugo-thing/</link>
+    <pubDate>Thu, 14 May 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/beginning-this-hugo-thing/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/beginning.jpg" referrerpolicy="no-referrer">
+            </div>What&rsquo;s this blog all about To share the love for the one and only OS, Emacs of course. Well, not entirely. It will contain random snippets of thought, both professional and unprofessional, so it will reflect my thoughts on the current state of certain software projects which I discover. In the beginning this going to be a bit self-centered, as it will also be a kind of &ldquo;self-documentation&rdquo; I suppose, but this could change easily.]]></description>
+</item></channel>
+</rss>

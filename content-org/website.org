@@ -1,0 +1,75 @@
+#+HUGO_BASE_DIR: ~/Documents/almoszediu-website
+#+HUGO_FRONT_MATTER_KEY_REPLACE: author>nil
+
+#+HUGO_WEIGHT: auto
+#+HUGO_AUTO_SET_LASTMOD: t
+
+* Announcements :@announcements:
+These posts in here will have the category set to /announcements/.
+** DONE Beginning this whole Hugo thing :hugo:org:
+:PROPERTIES:
+:EXPORT_FILE_NAME: beginning-this-hugo-thing
+:EXPORT_DATE: 2020-05-14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "/images/beginning.jpg"
+:END:
+*** What's this blog all about
+To share the love for the one and only OS, Emacs of course. Well, not entirely.
+It will contain random snippets of thought, both professional and
+unprofessional, so it will reflect my thoughts on the current state of certain
+software projects which I discover. In the beginning this going to be a bit
+self-centered, as it will also be a kind of "self-documentation" I suppose, but
+this could change easily.
+**** Implementation
+I'm fasfiting this whole website inside of Emacs, taking advantage of a couple
+of wonderful things, built by wonderful people:
+- [[https://gohugo.io][Hugo]] is a static site generator written inside of Go. You can use various
+  formats to edit the content of the website, but the most sensible choice is
+  Markdown, because that's what Hugo is really optimized for. The advantages of
+  this approach as opposed to a non-static website is that the only HTTP request
+  happens when the user loads in the page, making databases unneccesary, and
+  making the whole website a lot faster.
+- Markdown might be amazing, but every citizen of the Emacs realm knows, that
+  org-mode is the shit. So I'm writing new random But how can you use org mode
+  for your website, when you have to use markdown? [[https://ox-hugo.scripter.co][ox-hugo]] to the rescue! This
+  wonderful Emacs package not only enables you to convert your org thoughts to
+  Markdown, but also has the ability to export a single subtree into it's own
+  post, making possible to write all of your blogposts in a single place, taking
+  advantage of various org-mode tricks (*or so am I told, I actually still don't
+  know very much about them*). See for yourselves:
+ 
+  [[/images/org-mode-big-brain.png]]
+
+  Amazing isn't it? Well, I have to learn much more about this org thing, to
+  take advantage of it, but it's sure easier uploading updating the Github page
+  of the website, when it's only one measly file.
+- [[https://github.com/hlissner/doom-emacs][Doom Emacs]]. Well of course we cannot forgot the star of this evening, the
+  whole reason I'm going far and beyond in my static website setup. But it is
+  totally worth it. In the near future, there will be posts about my workflow,
+  and all the pain and suffering which came because of it, but it's all possible
+  thanks to hlissner's efforts. If you're still using Vim, Spacemacs or use
+  Emacs, but you're not sure how to configure it yourself, give this distro a
+  spin, I'm sure you'll get something out of it.
+
+ [[/images/doom-emacs.png]]
+**** Future
+I'm planning to write a Spotify frontend for Emacs, because I'm too lazy to
+switch workspaces to do such a trivial task, so yeah, instead of relying on some
+wonderfully written programs, like [[https://github.com/Rigelutte/spotify-tui][spotify-tui]], I'm wondering of a wild path,
+and write my first Emacs Lisp package. This thing is one of the reasons I
+started this blog, because I thought it would be fun to document the whole
+process, maybe some fortunate soul will learn from my mistakes.
+* Emacs :@emacs:
+Emacs gang where you at?
+** TODO Yet another praise for Doom :emacs:
+:PROPERTIES:
+:EXPORT_FILE_NAME: yet-another-praise-for-doom
+:EXPORT_DATE: 2020-05-14
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "/images/doom-logo.png"
+:END:
+*** The Vim times
+I know, everybody and their mother-in-law have already talked about this, but I
+think this thing cannot be understated: "Emacs is a good operating system, it
+only lacks a decent text editor.". I've tried to use Vim as my main text editor,
+I really did. I took a deep breath and tried to find the perfect Python packages
+for me to install, trying to emulate the nice features of the previous Electron
+based VS Code, from which I've departed with an aching heart.
