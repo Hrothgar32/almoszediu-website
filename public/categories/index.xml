@@ -11,5 +11,12 @@
     <author>Author</author>
     <guid>http://example.org/categories/announcements/</guid>
     <description><![CDATA[]]></description>
+</item><item>
+    <title>emacs</title>
+    <link>http://example.org/categories/emacs/</link>
+    <pubDate>Thu, 14 May 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/categories/emacs/</guid>
+    <description><![CDATA[]]></description>
 </item></channel>
 </rss>

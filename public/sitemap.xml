@@ -3,10 +3,13 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
             <loc>http://example.org/posts/beginning-this-hugo-thing/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/posts/yet-another-praise-for-doom/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
             <loc>http://example.org/categories/announcements/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
-            <loc>http://example.org/categories/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/categories/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/tags/emacs/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/categories/emacs/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
             <loc>http://example.org/tags/hugo/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
             <loc>http://example.org/tags/org/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
-            <loc>http://example.org/posts/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
-            <loc>http://example.org/tags/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url><url>
-            <loc>http://example.org/</loc><lastmod>2020-05-14T22:40:49&#43;03:00</lastmod></url></urlset>
+            <loc>http://example.org/posts/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/tags/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url><url>
+            <loc>http://example.org/</loc><lastmod>2020-05-14T23:58:53&#43;03:00</lastmod></url></urlset>
