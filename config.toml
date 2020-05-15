@@ -51,7 +51,7 @@ theme = "LoveIt"
       # subtitle shown in home page
       subtitle = "Blog about Emacs, hacking and other non-tech related stuff"
       # whether to use typeit animation for subtitle
-      typeit = false
+      typeit = true
       # whether to show social links
       social = true
       # LoveIt NEW | 0.2.0 disclaimer (HTML format is supported)
@@ -114,7 +114,7 @@ Email = "zold.almos@gmail.com"
       # you can add extra information after the name (HTML format is supported), such as icons
       post = ""
       # LoveIt NEW | 0.2.5 whether to use typeit animation for title name
-      typeit = true
+      typeit = false
 
 # Footer config
 [params.footer]

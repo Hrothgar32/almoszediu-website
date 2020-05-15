@@ -72,4 +72,20 @@ think this thing cannot be understated: "Emacs is a good operating system, it
 only lacks a decent text editor.". I've tried to use Vim as my main text editor,
 I really did. I took a deep breath and tried to find the perfect Python packages
 for me to install, trying to emulate the nice features of the previous Electron
-based VS Code, from which I've departed with an aching heart.
+based VS Code, from which I've departed with an aching hear
+** TODO Getting really started with Org mode. :emacs:org:
+:PROPERTIES:
+:EXPORT_FILE_NAME: getting-started-org
+:EXPORT_DATE: 2020-05-15
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "/images/unicorg.jpg"
+:END:
+Time and time again we hear about how ludicrously awesome Org is, and how should
+we use it for everything, from scheduling tasks to taking notes at university
+and the like. Since currently I'm not going back to Uni any time soon, I will
+try mainly to take advantage of the former feature.
+
+
+*** Agenda and other types of sorcery
+The agenda minibuffer could be called your "productivity hub", since from there
+you can access your tags and TODO's, the former categoryzing your tasks, the
+latter than visualizing them. To bring it up, you type:
