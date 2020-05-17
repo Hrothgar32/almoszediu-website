@@ -4,7 +4,14 @@
         <link>http://example.org/categories/</link>
         <description>Categories - Category - Álmos Zediu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 14 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Sat, 16 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>tutorials</title>
+    <link>http://example.org/categories/tutorials/</link>
+    <pubDate>Sat, 16 May 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/categories/tutorials/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>announcements</title>
     <link>http://example.org/categories/announcements/</link>
     <pubDate>Thu, 14 May 2020 00:00:00 &#43;0300</pubDate>

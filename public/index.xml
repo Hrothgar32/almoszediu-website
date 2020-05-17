@@ -4,7 +4,16 @@
         <link>http://example.org/</link>
         <description>My personal website, and blog.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 14 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Sat, 16 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+    <title>Some remarks on Remark42, and how to set it up</title>
+    <link>http://example.org/posts/how-to-set-up-remark/</link>
+    <pubDate>Sat, 16 May 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/how-to-set-up-remark/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/finger.jpg" referrerpolicy="no-referrer">
+            </div>One of the challenges of starting a blog like this is to add a commenting mechanism in order to connect with your audience. There are many options available, but today I&rsquo;ll be explaining why I&rsquo;ve chosen Remark, what are it&rsquo;s particular advantages which make me choose it over other options, and how did I set it up on my site. This particular guide is aimed primarily toward fellow Hugo users, but I think it can be followed by others as well, due to the way I hacked it into my blog.]]></description>
+</item><item>
     <title>Beginning this whole Hugo thing</title>
     <link>http://example.org/posts/beginning-this-hugo-thing/</link>
     <pubDate>Thu, 14 May 2020 00:00:00 &#43;0300</pubDate>

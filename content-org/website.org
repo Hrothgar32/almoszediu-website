@@ -87,8 +87,8 @@ try mainly to take advantage of the former feature.
 The agenda minibuffer could be called your "productivity hub", since from there
 you can access your tags and TODO's, the former categoryzing your tasks, the
 latter than visualizing them. To bring it up, you type:
-* Tech tutorials :@tutorial:
-** STRT [#B] Some remarks on Remark42, and how to set it up :hugo:remark:
+* Tech tutorials :@tutorials:
+** DONE Some remarks on Remark42, and how to set it up :hugo:remark:
 :PROPERTIES:
 :EXPORT_FILE_NAME: how-to-set-up-remark
 :EXPORT_DATE: 2020-05-16
@@ -103,7 +103,7 @@ particular guide is aimed primarily toward fellow Hugo users, but I think it can
 be followed by others as well, due to the way I hacked it into my blog.
 *** The competition
 **** [[https://disqus.com][Disqus]]
- Let's get the elephant out of the room, shall we? Disqus is easy to set up, easy to use, and comes built in with Hugo, and more
+ Let's get the elephant out of the room, shall we? Disqus is easy to set up, easy to use, and comes built in with Hugo, moreover
  you can set it up for free! Well, when something is too good to be true, it
  usually isn't. Disqus comes with advertisements, which it displays on your
  website and these ads may be totally out of touch with your actual content, for
@@ -111,17 +111,17 @@ be followed by others as well, due to the way I hacked it into my blog.
  [[/images/disqus-ads.png]]
  Yikes, disques-sting! So yeah, your blog may be filled with tabloid crap,
  unless you pay $10 a month, which for me, as a student, is a little bit much.
- Moreover, Disqus not only shows your user's ads, but [[https://chrislema.com/killed-disqus-commenting/][also tracks them in a
+ Moreover, Disqus not only shows ads to your readers, but [[https://chrislema.com/killed-disqus-commenting/][also tracks them in a
  parasitic way to sell their data,]] and the gateway might be your blog.
 **** [[https://staticman.net/][Staticman]]
 Staticman is a free and open source project which aims to bring form integration
-to fully static websites. The cool thing about this is that this way you can
+to fully static websites. The cool thing about this is that you can
 integrate it to your free to host GitHub pages site, because of the generous
 support by [[https://snipcart.com/][Snipcart]]. Because of it's open source nature, you can even host it on
 your site if you're so inclined.
 What's the deal breaker then? It's FOSS, it doesn't poke around in your
 business, why didn't I choose this? Well, it seemed to me a bit... lacking, not
-as pretty as Remark. It also lacks the social integration and avatars seen used
+as pretty as Remark. It also lacks the social integration and avatars used
 by other comment engines.
 
 [[/images/staticman.png]]
@@ -147,7 +147,7 @@ would say that because it gave me more Redditesque vibes, to be honest.
 [[/images/commento.png]]
 *** [[https://github.com/umputun/remark42][Remark itself]]
 Well I've could have gone over the whole "Comments alternatives" part of the
-Hugo docs, but I chose to cover just those, which I was considering. The main
+Hugo docs, but I chose to cover just those which I was considering. The main
 things, that ultimately lead me to choose Remark were:
 - it's free and open source
 - self-hosted option
@@ -163,8 +163,8 @@ I won't be posting pictures about it, because you can check it out right under
 the article.
 Let's talk about how did I set it up though?
 
-*** Setup, part I: your ingredients
-- 1 teaspoon of Docker
+*** Setup, part I:  your ingredients
+**** 1 teaspoon of Docker
  
   *Shell commands for Ubuntu-boys (also for Debian-boomers)*
 
@@ -216,3 +216,267 @@ sudo usermod -aG docker *your_username*
 
   After this, you should be able to use the docker commands which I'll be using.
   Sweet!
+
+**** 1 cup of nginx
+ 
+  Back when I started to play around with Python, I couldn't understand why
+  you'd need a reverse proxy, or a general purpose HTTP server for that matter.
+ 
+  Nginx does the wonderful thing of allowing multiple applications to connect
+  to the world using the same port. Why's that a good thing? It leaves fewer
+  points of attack for malicious users and other monsters under your bed, and
+  let's you easily configure subdomains for your various sites. Heck it even functions as a load balancer, to redirect traffic to other servers, if
+  you have the need (I don't. Yet.). I haven't used Apache, so I can't give
+  advice on that.
+
+  *Shell commands for Ubuntu-boys (also for Debian-boomers)*
+
+    #+BEGIN_SRC bash
+    sudo apt-get update
+    sudo apt-get install nginx
+    #+END_SRC
+
+   *Shell commands for Arch-wizards*
+  
+#+BEGIN_SRC bash
+sudo pacman -Sy
+sudo pacman -S nginx
+#+END_SRC
+
+*Shell commands for Fedora-fanatics*
+#+BEGIN_SRC bash
+sudo dnf install nginx
+#+END_SRC
+Now that the software is fine and dandy, it's time to enable it through good ol'
+systemd:
+
+#+BEGIN_SRC bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+#+END_SRC
+
+The latter command is for times when you want to reboot your server.
+
+If we want to communicate with the outside world, we need to enable nginx on our
+HTTP and HTTPS ports (assuming that you want to have/have an SSL certificate).
+This can be done with the following command:
+
+#+BEGIN_SRC bash
+sudo ufw allow 'NGINX HTTP_ALL'
+#+END_SRC
+Doing this step on Arch might not be as trivial unfortunately, unless you did
+the firewall setup. If you didn't you might want to check it out on the [[https://wiki.archlinux.org/index.php/Category:Firewalls][Arch
+Wiki]], which does a way more detailed and practical guide on it, than I could.
+**** 1 gear of Certbot
+Well, you actually will need all of Certbot's capabilities here, but don't worry,
+this one's pretty easy to install! This program will provide an SSL certificate
+for your website and the Remark server, which are required especially if you
+will have visitors sending comments to that server. Even if you already have an
+SSL certificate for your main domain, the server needs to be under it as well,
+otherwise  your browser will complain about the website operating with HTTPS and
+HTTP together.
+
+*Shell commands for Ubuntu-boys (Debian-boomers can skip the updating steps)*
+
+#+BEGIN_SRC bash
+    sudo apt-get update
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository universe
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get update
+    sudo apt-get install certbot python3-certbot-nginx
+#+END_SRC
+
+*Shell commands for Arch-wizards*
+
+#+BEGIN_SRC bash
+sudo pacman -S certbot certbot-nginx
+#+END_SRC
+
+*Shell commands for Fedora-fanatics*
+
+#+BEGIN_SRC bash
+sudo dnf install certbot certbot-nginx
+#+END_SRC
+*** Setup, part II: setting up the subdomain
+Technically, you could set up Remark42 without a subdomain, the official method
+is using one, and it actually isn't that difficult to set it up.
+First, you need to go to your domain registrar's (the company from which you
+bought your domain name) website, and on the page on which you can see your
+settings for that particular domain, go to the DNS options.
+
+[[/images/namecheap.png]]
+
+[[/images/godaddy.png]]
+
+On that page, you will want to add a new A record. For the "name" or "host"
+option you want to change the default @ character to the name of your subdomain,
+and in the "value" section you write the public IP address of your server.
+[[/images/examople.png]]
+*** Setup, part III: running Remark42 via docker
+First and foremost, you'll need a *docker-compose.yml* file. This basically
+tells Docker what is the base program, and you will provide some details on how
+to set it up. I will provide an example configuration here:
+#+BEGIN_SRC yaml
+version: '2'
+
+services:
+    remark:
+        build: .
+        image: umputun/remark42:latest
+        container_name: "remark42"
+        hostname: "remark42"
+        restart: always
+
+        logging:
+            driver: json-file
+            options:
+                max-size: "10m"
+                max-file: "5"
+
+        # uncomment to expose directly (no proxy)
+        #ports:
+        #  - "80:8080"
+
+        environment:
+            - REMARK_URL=
+            - SECRET=
+            - SITE=
+            - STORE_BOLT_PATH=/srv/var/db
+            - BACKUP_PATH=/srv/var/backup
+            - DEBUG=true
+            - AUTH_GOOGLE_CID
+            - AUTH_GOOGLE_CSEC
+            - AUTH_GITHUB_CID=
+            - AUTH_GITHUB_CSEC=
+            - AUTH_FACEBOOK_CID
+            - AUTH_FACEBOOK_CSEC
+            - AUTH_DISQUS_CID
+            - AUTH_DISQUS_CSEC
+            # - ADMIN_PASSWD=password
+        volumes:
+            - ./var:/srv/var
+#+END_SRC
+
+You can leave most of these alone, but you *have to* give values to some
+of these options:
+- REMARK_URL
+
+  This is the URL of the remark server, and it will be your domain name
+  prefixed with your subdomain: https://remark.exampledomain.com
+- SECRET
+
+  This has to be a unique string. Many backend applications have these for
+  security reasons.
+- SITE
+ 
+  This is the ID of your website, which runs Remark42, you just give it a
+  string, which has to matched in your HTML snippet down to line: *example_id*
+Apart from these, you have to provide an authentication method by which your
+user's can identify themselves. This can be done through Facebook, Disqus,
+Google and GitHub. I'm going to show you how you can obtain GitHub OAuth
+authentication, the process is similar other social media applications.
+1) Go to https://github.com/settings/developers and click on "New OAuth App"
+  [[/images/github-oauth.png]]
+2) Fill in the form. Application name can be whatever your heart desires, the
+   *Homepage URL* will take the form: https://remark.exampledomain.com.
+
+   The *Application Callback URL* is the URL by which your Remark42 server
+   authenticates to GitHub, and will take the form:
+   https://remark.exampledomain.com/auth/github/callback
+3) After you've done this, you can access your application's *Client ID* and
+   *Client Secret* copy these to their corresponding (*AUTH_GITHUB_CID*,
+   *AUTH_GITHUB_CSEC*) properties in your *docker-compose.yaml* file.
+
+The [[https://github.com/umputun/remark42#github-auth-provider][Remark42 README file]] is actually really easy to follow regarding OAuth
+access, I just wrote the process here so you don't have to open other pages.
+Regardless, we can finally start our Remark42 server with Docker!
+
+#+BEGIN_SRC bash
+docker-compose pull
+docker-compose up -d
+#+END_SRC
+
+After this is done, you want to find out the IP address of your Docker container
+to later forward to it the traffic coming from your subdomain.
+
+#+BEGIN_SRC bash
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' remark42
+#+END_SRC
+*** Setup, part IV: nginx magic
+The default way to your nginx config is: */etc/nginx/sites-available/default*.
+Open it with your favorite text editor, (don't forget to sudo) and add a new
+*server block* similar to this one:
+#+BEGIN_SRC json
+server {
+   server_name remark.exampledomain.com;
+   location / {
+         proxy_pass http://your_docker_ip:8080;
+   }
+}
+#+END_SRC
+This tells nginx to reroute every incoming request to your docker container, which is a
+wonderful thing, because you don't have to open additional ports on your
+firewall.
+After you edit and save your config file, restart nginx:
+#+BEGIN_SRC bash
+sudo systemctl restart nginx
+#+END_SRC
+*** Setup, part V: Certbot certificates
+Now you will get SSL certificates for your Remark server, and if you haven't
+done it yet, for your website as well.
+It couldn't be any easier than typing in:
+#+BEGIN_SRC bash
+sudo certbot --nginx
+#+END_SRC
+Just follow it's instructions, they are really straightforward. I'd advice to
+set rerouting to HTTPS by default.
+After completing Cerbot's instructions, if you visit https://remark.exampledomain.com/web, you should see
+something similar to this:
+[[/images/demo.png]]
+*** Setup, part VI: Getting it to the Front!
+We've done all this good work, now we just have to make it appear under our
+posts! To do that, you'll have to visit your Hugo project's main folder (the one
+with *config.toml* in it) and get the
+*/themes/--your_theme_name--/layouts/posts/single.html* file (I assume every
+Hugo themes directory structure's similar).
+This is not a regular HTML file, but one with template engine markup. Don't get
+intimidated by it, but copy in this snippet, BEFORE the final *{{- end -}}* tag:
+#+BEGIN_SRC js
+<script>
+  var remark_config = {
+    host: , // hostname of remark server, same as REMARK_URL in backend config,
+    site_id: , //same as the ID you set in the docker-compose.yaml file
+    components: ['embed'], // optional param; which components to load. default to ["embed"]
+                    // to load all components define components as ['embed', 'last-comments', 'counter']
+                    // available component are:
+                    //     - 'embed': basic comments widget
+                    //     - 'last-comments': last comments widget, see `Last Comments` section below
+                    //     - 'counter': counter widget, see `Counter` section below
+    max_shown_comments: 10, // optional param; if it isn't defined default value (15) will be used
+    theme: 'dark', // optional param; if it isn't defined default value ('light') will be used
+    locale: 'en' // set up locale and language, if it isn't defined default value ('en') will be used
+  };
+
+  (function(c) {
+    for(var i = 0; i < c.length; i++){
+      var d = document, s = d.createElement('script');
+      s.src = remark_config.host + '/web/' +c[i] +'.js';
+      s.defer = true;
+      (d.head || d.body).appendChild(s);
+    }
+  })(remark_config.components || ['embed']);
+</script>
+#+END_SRC
+
+Complete the *host* and *site_id* sections with the instructions left in the comments.
+Now you only have one last thing to do insert this little snippet of HTML where
+you see fit on your HTML page:
+#+BEGIN_SRC HTML
+<div id="remark42"></div>
+#+END_SRC
+*** Final thoughts
+If you've made it to the end of it, and now have a new shiny comment box under
+your posts: congratulations! You've made another place on the interwebs to start
+a flame war. All jokes aside, I hope I could help with this little tutorial. For
+more details and documentation on Remark42 visit it's GitHub page: https://github.com/umputun/remark42.

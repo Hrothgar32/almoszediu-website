@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Some remarks on Remark42, and how to set it up - Álmos Zediu</title><meta name="Description" content="My personal website, and blog."><meta property="og:title" content="Some remarks on Remark42, and how to set it up" />
+<meta property="og:description" content="One of the challenges of starting a blog like this is to add a commenting mechanism in order to connect with your audience. There are many options available, but today I&rsquo;ll be explaining why I&rsquo;ve chosen Remark, what are it&rsquo;s particular advantages which make me choose it over other options, and how did I set it up on my site. This particular guide is aimed primarily toward fellow Hugo users, but I think it can be followed by others as well, due to the way I hacked it into my blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/how-to-set-up-remark/" />
+<meta property="article:published_time" content="2020-05-16T00:00:00+03:00" />
+<meta property="article:modified_time" content="2020-05-17T22:53:50+03:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Some remarks on Remark42, and how to set it up"/>
+<meta name="twitter:description" content="One of the challenges of starting a blog like this is to add a commenting mechanism in order to connect with your audience. There are many options available, but today I&rsquo;ll be explaining why I&rsquo;ve chosen Remark, what are it&rsquo;s particular advantages which make me choose it over other options, and how did I set it up on my site. This particular guide is aimed primarily toward fellow Hugo users, but I think it can be followed by others as well, due to the way I hacked it into my blog."/>
+<meta name="application-name" content="Álmos Zediu">
+<meta name="apple-mobile-web-app-title" content="Álmos Zediu"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/posts/how-to-set-up-remark/" /><link rel="prev" href="http://example.org/posts/beginning-this-hugo-thing/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Some remarks on Remark42, and how to set it up",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/posts\/how-to-set-up-remark\/"
+        },"genre": "posts","keywords": "hugo, remark","wordcount":  2344 ,
+        "url": "http:\/\/example.org\/posts\/how-to-set-up-remark\/","datePublished": "2020-05-16T00:00:00+03:00","dateModified": "2020-05-17T22:53:50+03:00","author": {
+                "@type": "Person",
+                "name": "Álmos Zediu"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Álmos Zediu">Almos Zediu</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Álmos Zediu">Almos Zediu</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Some remarks on Remark42, and how to set it up</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Álmos Zediu</a></span>&nbsp;
+                    <span class="post-category">included in<a href="/categories/tutorials/">
+                                <i class="far fa-folder fa-fw"></i>tutorials
+                            </a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2020-05-16>2020-05-16</time>&nbsp;
+                <i class="fas fa-pencil-alt fa-fw"></i>&nbsp;about 2344 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;12 min&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading/normal.min.svg"
+        data-src="/images/finger.jpg"
+        data-srcset="/images/finger.jpg, /images/finger.jpg 1.5x, /images/finger.jpg 2x"
+        data-sizes="auto"
+        alt="/images/finger.jpg"
+        title="/images/finger.jpg" /></div><div class="details toc" id="toc-static">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-competition">The competition</a>
+      <ul>
+        <li><a href="#disqus"><a href="https://disqus.com">Disqus</a></a></li>
+        <li><a href="#staticman"><a href="https://staticman.net/">Staticman</a></a></li>
+        <li><a href="#utterances"><a href="https://utteranc.es">Utterances</a></a></li>
+        <li><a href="#commento"><a href="https://commento.io/">Commento</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#remark-itself"><a href="https://github.com/umputun/remark42">Remark itself</a></a></li>
+    <li><a href="#setup-part-i-your-ingredients">Setup, part I:  your ingredients</a>
+      <ul>
+        <li><a href="#1-teaspoon-of-docker">1 teaspoon of Docker</a></li>
+        <li><a href="#1-cup-of-nginx">1 cup of nginx</a></li>
+        <li><a href="#1-gear-of-certbot">1 gear of Certbot</a></li>
+      </ul>
+    </li>
+    <li><a href="#setup-part-ii-setting-up-the-subdomain">Setup, part II: setting up the subdomain</a></li>
+    <li><a href="#setup-part-iii-running-remark42-via-docker">Setup, part III: running Remark42 via docker</a></li>
+    <li><a href="#setup-part-iv-nginx-magic">Setup, part IV: nginx magic</a></li>
+    <li><a href="#setup-part-v-certbot-certificates">Setup, part V: Certbot certificates</a></li>
+    <li><a href="#setup-part-vi-getting-it-to-the-front">Setup, part VI: Getting it to the Front!</a></li>
+    <li><a href="#final-thoughts">Final thoughts</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>One of the challenges of starting a blog like this is to add a commenting
+mechanism in order to connect with your audience. There are many options
+available, but today I&rsquo;ll be explaining why I&rsquo;ve chosen Remark, what are it&rsquo;s
+particular advantages which make me choose it over other options, and how did I
+set it up on my site. This
+particular guide is aimed primarily toward fellow Hugo users, but I think it can
+be followed by others as well, due to the way I hacked it into my blog.</p>
+<h2 id="the-competition">The competition</h2>
+<h3 id="disqus"><a href="https://disqus.com" target="_blank" rel="noopener noreffer">Disqus</a></h3>
+<p>Let&rsquo;s get the elephant out of the room, shall we? Disqus is easy to set up, easy to use, and comes built in with Hugo, moreover
+you can set it up for free! Well, when something is too good to be true, it
+usually isn&rsquo;t. Disqus comes with advertisements, which it displays on your
+website and these ads may be totally out of touch with your actual content, for
+example:
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/images/disqus-ads.png"
+        data-srcset="/images/disqus-ads.png, /images/disqus-ads.png 1.5x, /images/disqus-ads.png 2x"
+        data-sizes="auto"
+        alt="/images/disqus-ads.png"
+        title="/images/disqus-ads.png" />
+Yikes, disques-sting! So yeah, your blog may be filled with tabloid crap,
+unless you pay $10 a month, which for me, as a student, is a little bit much.
+Moreover, Disqus not only shows ads to your readers, but <a href="https://chrislema.com/killed-disqus-commenting/" target="_blank" rel="noopener noreffer">also tracks them in a
+parasitic way to sell their data,</a> and the gateway might be your blog.</p>
+<h3 id="staticman"><a href="https://staticman.net/" target="_blank" rel="noopener noreffer">Staticman</a></h3>
+<p>Staticman is a free and open source project which aims to bring form integration
+to fully static websites. The cool thing about this is that you can
+integrate it to your free to host GitHub pages site, because of the generous
+support by <a href="https://snipcart.com/" target="_blank" rel="noopener noreffer">Snipcart</a>. Because of it&rsquo;s open source nature, you can even host it on
+your site if you&rsquo;re so inclined.
+What&rsquo;s the deal breaker then? It&rsquo;s FOSS, it doesn&rsquo;t poke around in your
+business, why didn&rsquo;t I choose this? Well, it seemed to me a bit&hellip; lacking, not
+as pretty as Remark. It also lacks the social integration and avatars used
+by other comment engines.</p>
+<figure>
+    <img src="/images/staticman.png"/> 
+</figure>
+
+<h3 id="utterances"><a href="https://utteranc.es" target="_blank" rel="noopener noreffer">Utterances</a></h3>
+<p>&ldquo;A lightweight comments widget built on GitHub issues.&rdquo; Sounds amazing! But not
+so much for me. Don&rsquo;t get me wrong, I love you fellow nerds, but I think the
+choice should be given to you, if you want the world to see your lovely face
+next to your comment, or not. It might be useful for some of you though, who
+want the advantages of GitHub pages with additional GitHub goodness. It&rsquo;s a
+creative and elegant solution, I&rsquo;ll have to give it that.</p>
+<figure>
+    <img src="/images/utterances.png"/> 
+</figure>
+
+<h3 id="commento"><a href="https://commento.io/" target="_blank" rel="noopener noreffer">Commento</a></h3>
+<p>Commento has a very nice business model, and I think it proves, that open-source
+can be turned into a business just as easily as proprietary applications. It
+also received $19,200 from the Mozzilla foundations, which shows its
+seriousness, I think. This comment engine can also be self hosted with Docker so
+I think it really comes down to personal preference, if you choose this or
+Remark. I might try it out in the future, because it supports many of the
+features, which were important to me. If you ask me, why I&rsquo;ve chosen Remark, I
+would say that because it gave me more Redditesque vibes, to be honest.</p>
+<figure>
+    <img src="/images/commento.png"/> 
+</figure>
+
+<h2 id="remark-itself"><a href="https://github.com/umputun/remark42" target="_blank" rel="noopener noreffer">Remark itself</a></h2>
+<p>Well I&rsquo;ve could have gone over the whole &ldquo;Comments alternatives&rdquo; part of the
+Hugo docs, but I chose to cover just those which I was considering. The main
+things, that ultimately lead me to choose Remark were:</p>
+<ul>
+<li>it&rsquo;s free and open source</li>
+<li>self-hosted option</li>
+<li>OAuth2 features easily enabled through it&rsquo;s docker-compose file</li>
+<li>RSS for you, flamewar warriors</li>
+<li>it looks like Reddit</li>
+</ul>
+<p>It&rsquo;s self-hosted which for me, as a do-everything-yourself, Emacs loving madman
+is acceptable, even desirable, but you might have different needs, or don&rsquo;t want
+to be bothered by hosting a blog on a VPS. I won&rsquo;t be going into VPS hosting,
+because that is beyond the scope of this blogpost, just know, that the
+alternatives listed above don&rsquo;t need self-hosting.
+I won&rsquo;t be posting pictures about it, because you can check it out right under
+the article.
+Let&rsquo;s talk about how did I set it up though?</p>
+<h2 id="setup-part-i-your-ingredients">Setup, part I:  your ingredients</h2>
+<h3 id="1-teaspoon-of-docker">1 teaspoon of Docker</h3>
+<p><strong>Shell commands for Ubuntu-boys (also for Debian-boomers)</strong></p>
+<p>I assume that you use version 16.04 or higher of Ubuntu or a distribution
+based off of Ubuntu. My server runs on
+version 18.04 which seems to be the most prevalent version in hosting as of
+now.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get install docker docker-compose
+</code></pre></div><p><strong>Shell commands for Arch-mages</strong></p>
+<p>Well I&rsquo;ve done some toy projects on Arch Linux, but I don&rsquo;t know if it&rsquo;s very
+suitable for server usage, because of it&rsquo;s bleeding edge nature.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -Sy
+sudo pacman -S docker docker-compose
+</code></pre></div><p><strong>Shell commands for Fedora-fanatics</strong></p>
+<p>I&rsquo;m not an expert on Fedora, but the Docker guys say, that you should have a
+version of minimum Fedora 30. I mainly copied the commands from their site, so
+you lazy bastards won&rsquo;t have to open another tab, so take these with a grain
+of salt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --add-repo <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose
+</code></pre></div><p>The next step is to enable the Docker service through systemd:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start docker
+</code></pre></div><p>Another cool thing would be to add your user to the docker group. Without
+this, you&rsquo;d have to run docker commands with sudo, or worse, as the root user,
+so I think it&rsquo;s time you show the server that you&rsquo;re a big boy now:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo usermod -aG docker *your_username*
+</code></pre></div><p>After this, you should be able to use the docker commands which I&rsquo;ll be using.
+Sweet!</p>
+<h3 id="1-cup-of-nginx">1 cup of nginx</h3>
+<p>Back when I started to play around with Python, I couldn&rsquo;t understand why
+you&rsquo;d need a reverse proxy, or a general purpose HTTP server for that matter.</p>
+<p>Nginx does the wonderful thing of allowing multiple applications to connect
+to the world using the same port. Why&rsquo;s that a good thing? It leaves fewer
+points of attack for malicious users and other monsters under your bed, and
+let&rsquo;s you easily configure subdomains for your various sites. Heck it even functions as a load balancer, to redirect traffic to other servers, if
+you have the need (I don&rsquo;t. Yet.). I haven&rsquo;t used Apache, so I can&rsquo;t give
+advice on that.</p>
+<p><strong>Shell commands for Ubuntu-boys (also for Debian-boomers)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    sudo apt-get update
+    sudo apt-get install nginx
+</code></pre></div><p><strong>Shell commands for Arch-wizards</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -Sy
+sudo pacman -S nginx
+</code></pre></div><p><strong>Shell commands for Fedora-fanatics</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install nginx
+</code></pre></div><p>Now that the software is fine and dandy, it&rsquo;s time to enable it through good ol&rsquo;
+systemd:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start nginx
+sudo systemctl enable nginx
+</code></pre></div><p>The latter command is for times when you want to reboot your server.</p>
+<p>If we want to communicate with the outside world, we need to enable nginx on our
+HTTP and HTTPS ports (assuming that you want to have/have an SSL certificate).
+This can be done with the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo ufw allow <span style="color:#e6db74">&#39;NGINX HTTP_ALL&#39;</span>
+</code></pre></div><p>Doing this step on Arch might not be as trivial unfortunately, unless you did
+the firewall setup. If you didn&rsquo;t you might want to check it out on the <a href="https://wiki.archlinux.org/index.php/Category:Firewalls" target="_blank" rel="noopener noreffer">Arch
+Wiki</a>, which does a way more detailed and practical guide on it, than I could.</p>
+<h3 id="1-gear-of-certbot">1 gear of Certbot</h3>
+<p>Well, you actually will need all of Certbot&rsquo;s capabilities here, but don&rsquo;t worry,
+this one&rsquo;s pretty easy to install! This program will provide an SSL certificate
+for your website and the Remark server, which are required especially if you
+will have visitors sending comments to that server. Even if you already have an
+SSL certificate for your main domain, the server needs to be under it as well,
+otherwise  your browser will complain about the website operating with HTTPS and
+HTTP together.</p>
+<p><strong>Shell commands for Ubuntu-boys (Debian-boomers can skip the updating steps)</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    sudo apt-get update
+    sudo apt-get install software-properties-common
+    sudo add-apt-repository universe
+    sudo add-apt-repository ppa:certbot/certbot
+    sudo apt-get update
+    sudo apt-get install certbot python3-certbot-nginx
+</code></pre></div><p><strong>Shell commands for Arch-wizards</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo pacman -S certbot certbot-nginx
+</code></pre></div><p><strong>Shell commands for Fedora-fanatics</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install certbot certbot-nginx
+</code></pre></div><h2 id="setup-part-ii-setting-up-the-subdomain">Setup, part II: setting up the subdomain</h2>
+<p>Technically, you could set up Remark42 without a subdomain, the official method
+is using one, and it actually isn&rsquo;t that difficult to set it up.
+First, you need to go to your domain registrar&rsquo;s (the company from which you
+bought your domain name) website, and on the page on which you can see your
+settings for that particular domain, go to the DNS options.</p>
+<figure>
+    <img src="/images/namecheap.png"/> 
+</figure>
+
+<figure>
+    <img src="/images/godaddy.png"/> 
+</figure>
+
+<p>On that page, you will want to add a new A record. For the &ldquo;name&rdquo; or &ldquo;host&rdquo;
+option you want to change the default @ character to the name of your subdomain,
+and in the &ldquo;value&rdquo; section you write the public IP address of your server.
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/images/examople.png"
+        data-srcset="/images/examople.png, /images/examople.png 1.5x, /images/examople.png 2x"
+        data-sizes="auto"
+        alt="/images/examople.png"
+        title="/images/examople.png" /></p>
+<h2 id="setup-part-iii-running-remark42-via-docker">Setup, part III: running Remark42 via docker</h2>
+<p>First and foremost, you&rsquo;ll need a <strong>docker-compose.yml</strong> file. This basically
+tells Docker what is the base program, and you will provide some details on how
+to set it up. I will provide an example configuration here:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;2&#39;</span>
+
+<span style="color:#66d9ef">services</span>:
+    <span style="color:#66d9ef">remark</span>:
+        <span style="color:#66d9ef">build</span>: .
+        <span style="color:#66d9ef">image</span>: umputun/remark42:latest
+        <span style="color:#66d9ef">container_name</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
+        <span style="color:#66d9ef">hostname</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
+        <span style="color:#66d9ef">restart</span>: always
+
+        <span style="color:#66d9ef">logging</span>:
+            <span style="color:#66d9ef">driver</span>: json-file
+            <span style="color:#66d9ef">options</span>:
+                <span style="color:#66d9ef">max-size</span>: <span style="color:#e6db74">&#34;10m&#34;</span>
+                <span style="color:#66d9ef">max-file</span>: <span style="color:#e6db74">&#34;5&#34;</span>
+
+        <span style="color:#75715e"># uncomment to expose directly (no proxy)</span>
+        <span style="color:#75715e">#ports:</span>
+        <span style="color:#75715e">#  - &#34;80:8080&#34;</span>
+
+        <span style="color:#66d9ef">environment</span>:
+            - REMARK_URL=
+            - SECRET=
+            - SITE=
+            - STORE_BOLT_PATH=/srv/var/db
+            - BACKUP_PATH=/srv/var/backup
+            - DEBUG=<span style="color:#66d9ef">true</span>
+            - AUTH_GOOGLE_CID
+            - AUTH_GOOGLE_CSEC
+            - AUTH_GITHUB_CID=
+            - AUTH_GITHUB_CSEC=
+            - AUTH_FACEBOOK_CID
+            - AUTH_FACEBOOK_CSEC
+            - AUTH_DISQUS_CID
+            - AUTH_DISQUS_CSEC
+            <span style="color:#75715e"># - ADMIN_PASSWD=password</span>
+        <span style="color:#66d9ef">volumes</span>:
+            - ./var:/srv/var
+</code></pre></div><p>You can leave most of these alone, but you <strong>have to</strong> give values to some
+of these options:</p>
+<ul>
+<li>
+<p>REMARK_URL</p>
+<p>This is the URL of the remark server, and it will be your domain name
+prefixed with your subdomain: <a href="https://remark.exampledomain.com">https://remark.exampledomain.com</a></p>
+</li>
+<li>
+<p>SECRET</p>
+<p>This has to be a unique string. Many backend applications have these for
+security reasons.</p>
+</li>
+<li>
+<p>SITE</p>
+<p>This is the ID of your website, which runs Remark42, you just give it a
+string, which has to matched in your HTML snippet down to line: <strong>example_id</strong></p>
+</li>
+</ul>
+<p>Apart from these, you have to provide an authentication method by which your
+user&rsquo;s can identify themselves. This can be done through Facebook, Disqus,
+Google and GitHub. I&rsquo;m going to show you how you can obtain GitHub OAuth
+authentication, the process is similar other social media applications.</p>
+<ol>
+<li>
+<p>Go to <a href="https://github.com/settings/developers">https://github.com/settings/developers</a> and click on &ldquo;New OAuth App&rdquo;
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/images/github-oauth.png"
+        data-srcset="/images/github-oauth.png, /images/github-oauth.png 1.5x, /images/github-oauth.png 2x"
+        data-sizes="auto"
+        alt="/images/github-oauth.png"
+        title="/images/github-oauth.png" /></p>
+</li>
+<li>
+<p>Fill in the form. Application name can be whatever your heart desires, the
+<strong>Homepage URL</strong> will take the form: <a href="https://remark.exampledomain.com">https://remark.exampledomain.com</a>.</p>
+<p>The <strong>Application Callback URL</strong> is the URL by which your Remark42 server
+authenticates to GitHub, and will take the form:
+<a href="https://remark.exampledomain.com/auth/github/callback">https://remark.exampledomain.com/auth/github/callback</a></p>
+</li>
+<li>
+<p>After you&rsquo;ve done this, you can access your application&rsquo;s <strong>Client ID</strong> and
+<strong>Client Secret</strong> copy these to their corresponding (<strong>AUTH_GITHUB_CID</strong>,
+<strong>AUTH_GITHUB_CSEC</strong>) properties in your <strong>docker-compose.yaml</strong> file.</p>
+</li>
+</ol>
+<p>The <a href="https://github.com/umputun/remark42#github-auth-provider" target="_blank" rel="noopener noreffer">Remark42 README file</a> is actually really easy to follow regarding OAuth
+access, I just wrote the process here so you don&rsquo;t have to open other pages.
+Regardless, we can finally start our Remark42 server with Docker!</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker-compose pull
+docker-compose up -d
+</code></pre></div><p>After this is done, you want to find out the IP address of your Docker container
+to later forward to it the traffic coming from your subdomain.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">docker inspect -f <span style="color:#e6db74">&#39;{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}&#39;</span> remark42
+</code></pre></div><h2 id="setup-part-iv-nginx-magic">Setup, part IV: nginx magic</h2>
+<p>The default way to your nginx config is: <strong>/etc/nginx/sites-available/default</strong>.
+Open it with your favorite text editor, (don&rsquo;t forget to sudo) and add a new
+<strong>server block</strong> similar to this one:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json"><span style="color:#960050;background-color:#1e0010">server</span> {
+   <span style="color:#960050;background-color:#1e0010">server_name</span> <span style="color:#960050;background-color:#1e0010">remark.exampledomain.com;</span>
+   <span style="color:#960050;background-color:#1e0010">location</span> <span style="color:#960050;background-color:#1e0010">/</span> <span style="color:#960050;background-color:#1e0010">{</span>
+         <span style="color:#960050;background-color:#1e0010">proxy_pass</span> <span style="color:#960050;background-color:#1e0010">http://your_docker_ip:8080;</span>
+   }
+<span style="color:#960050;background-color:#1e0010">}</span>
+</code></pre></div><p>This tells nginx to reroute every incoming request to your docker container, which is a
+wonderful thing, because you don&rsquo;t have to open additional ports on your
+firewall.
+After you edit and save your config file, restart nginx:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl restart nginx
+</code></pre></div><h2 id="setup-part-v-certbot-certificates">Setup, part V: Certbot certificates</h2>
+<p>Now you will get SSL certificates for your Remark server, and if you haven&rsquo;t
+done it yet, for your website as well.
+It couldn&rsquo;t be any easier than typing in:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo certbot --nginx
+</code></pre></div><p>Just follow it&rsquo;s instructions, they are really straightforward. I&rsquo;d advice to
+set rerouting to HTTPS by default.
+After completing Cerbot&rsquo;s instructions, if you visit <a href="https://remark.exampledomain.com/web">https://remark.exampledomain.com/web</a>, you should see
+something similar to this:
+<img
+        class="lazyload"
+        src="/svg/loading/small.min.svg"
+        data-src="/images/demo.png"
+        data-srcset="/images/demo.png, /images/demo.png 1.5x, /images/demo.png 2x"
+        data-sizes="auto"
+        alt="/images/demo.png"
+        title="/images/demo.png" /></p>
+<h2 id="setup-part-vi-getting-it-to-the-front">Setup, part VI: Getting it to the Front!</h2>
+<p>We&rsquo;ve done all this good work, now we just have to make it appear under our
+posts! To do that, you&rsquo;ll have to visit your Hugo project&rsquo;s main folder (the one
+with <strong>config.toml</strong> in it) and get the
+<strong><em>themes</em>&ndash;your_theme_name&ndash;/layouts/posts/single.html</strong> file (I assume every
+Hugo themes directory structure&rsquo;s similar).
+This is not a regular HTML file, but one with template engine markup. Don&rsquo;t get
+intimidated by it, but copy in this snippet, BEFORE the final <strong>{{- end -}}</strong> tag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">remark_config</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">host</span><span style="color:#f92672">:</span> , <span style="color:#75715e">// hostname of remark server, same as REMARK_URL in backend config,
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">site_id</span><span style="color:#f92672">:</span> , <span style="color:#75715e">//same as the ID you set in the docker-compose.yaml file
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">components</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;embed&#39;</span>], <span style="color:#75715e">// optional param; which components to load. default to [&#34;embed&#34;]
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">// to load all components define components as [&#39;embed&#39;, &#39;last-comments&#39;, &#39;counter&#39;]
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">// available component are:
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">//     - &#39;embed&#39;: basic comments widget
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">//     - &#39;last-comments&#39;: last comments widget, see `Last Comments` section below
+</span><span style="color:#75715e"></span>                    <span style="color:#75715e">//     - &#39;counter&#39;: counter widget, see `Counter` section below
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">max_shown_comments</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">10</span>, <span style="color:#75715e">// optional param; if it isn&#39;t defined default value (15) will be used
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">theme</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;dark&#39;</span>, <span style="color:#75715e">// optional param; if it isn&#39;t defined default value (&#39;light&#39;) will be used
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">locale</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;en&#39;</span> <span style="color:#75715e">// set up locale and language, if it isn&#39;t defined default value (&#39;en&#39;) will be used
+</span><span style="color:#75715e"></span>  };
+
+  (<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">c</span>) {
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">length</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>){
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> document, <span style="color:#a6e22e">s</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;script&#39;</span>);
+      <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">remark_config</span>.<span style="color:#a6e22e">host</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;/web/&#39;</span> <span style="color:#f92672">+</span><span style="color:#a6e22e">c</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">+</span><span style="color:#e6db74">&#39;.js&#39;</span>;
+      <span style="color:#a6e22e">s</span>.<span style="color:#a6e22e">defer</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+      (<span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">head</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">d</span>.<span style="color:#a6e22e">body</span>).<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">s</span>);
+    }
+  })(<span style="color:#a6e22e">remark_config</span>.<span style="color:#a6e22e">components</span> <span style="color:#f92672">||</span> [<span style="color:#e6db74">&#39;embed&#39;</span>]);
+<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div><p>Complete the <strong>host</strong> and <strong>site_id</strong> sections with the instructions left in the comments.
+Now you only have one last thing to do insert this little snippet of HTML where
+you see fit on your HTML page:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;remark42&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><h2 id="final-thoughts">Final thoughts</h2>
+<p>If you&rsquo;ve made it to the end of it, and now have a new shiny comment box under
+your posts: congratulations! You&rsquo;ve made another place on the interwebs to start
+a flame war. All jokes aside, I hope I could help with this little tutorial. For
+more details and documentation on Remark42 visit it&rsquo;s GitHub page: <a href="https://github.com/umputun/remark42">https://github.com/umputun/remark42</a>.</p>
+</div>
+        <hr><div id="remark42"></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>The article was updated on 2020-05-17</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/remark/">remark</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/beginning-this-hugo-thing/" class="prev" rel="prev" title="Beginning this whole Hugo thing"><i class="fas fa-angle-left fa-fw"></i>Beginning this whole Hugo thing</a></div>
+</div>
+</article>
+<script>
+  var remark_config = {
+    host: "https://remark.almoszediu.com", 
+    site_id: 'bestest_id',
+    components: ['embed'], 
+                           
+                           
+                           
+                           
+                           
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+                     
+    max_shown_comments: 10, 
+    theme: 'dark', 
+    locale: 'en' 
+  };
+
+  (function(c) {
+    for(var i = 0; i < c.length; i++){
+      var d = document, s = d.createElement('script');
+      s.src = remark_config.host + '/web/' +c[i] +'.js';
+      s.defer = true;
+      (d.head || d.body).appendChild(s);
+    }
+  })(remark_config.components || ['embed']);
+</script></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Álmos Zediu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
