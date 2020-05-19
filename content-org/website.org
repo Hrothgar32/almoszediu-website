@@ -480,3 +480,50 @@ If you've made it to the end of it, and now have a new shiny comment box under
 your posts: congratulations! You've made another place on the interwebs to start
 a flame war. All jokes aside, I hope I could help with this little tutorial. For
 more details and documentation on Remark42 visit it's GitHub page: https://github.com/umputun/remark42.
+**** 
+* Zoomer rants :@zoomer-rants:
+** TODO Our insatiable need to consume online content :rant:consumerism:
+:PROPERTIES:
+:EXPORT_FILE_NAME: need-to-feed
+:EXPORT_DATE: 2020-05-19
+:END:
+
+Every passing day, this corona thing makes me consume more and more online
+content, in order to avoid facing my responsibilites and pass the time somehow.
+Our generation (young adults in their late teens, early twenties) praise
+themselves in avoiding the pitfall of television. We argue, that because we opt
+out of the control of a television network, we control the content we watch and
+it's not the other way around, which is how the boomers are fooled by televison
+networks. I'd actually argue against this.
+*** YouTube is no better than your average cable subscription
+Now hear me out. I can't speak for everyone, that is for sure, I'm just talking
+about my personal experience, and the things which I have noticed among my
+friends.
+
+Most of the time we seek something easy to consume, easy to digest. We aimlessly
+wander around the landscape of YouTube, following it's recommendations, watching
+our feed be filled with creators about whom we might have forget about who they
+actually were, but we subscribed anyways because of one particular video, at the
+end of which we were kindly asked to like, subscribe, hit the bell notification,
+the usual drill. Isn't this familiar? Isn't this how we... watched TV? Aimless,
+zombie like state, when we just want to be entertained, want to avoid our own
+thoughts, problems and more. To me, this platform in this regard is not better,
+but actually worse. At least, when we were watching TV, we were struck odd by
+stupidity of advertisements. Speaking of which...
+*** The advent of in-content advertisement. Improvise, adapt, overcome
+If you read this blog, you probably know, what AdBlock is. It was born out of a
+simple need: purify the web. In the early days, of which I wasn't really that
+much a part of (we got internet at my house 2008-ish?), but even at the end of
+it, the internet was a Wild West. There was little to no corporate interest, just a
+bunch of nerds like myself launching their websites, and the tech industry
+producing it's first couple of giants, which the world watched with peering
+eyes, but weren't of the significance or importance as they are today. It was a
+naive and liberating place, not controlled by two or three big companies, like
+it is today. Online forums, dozens of proto-social media candidates, sprawling
+communities. Even as a child I wandered around the forums of the only MMORPG
+that could be played on my Pentium4 computer (Metin2) and made some good friends
+on IRC chats.
+
+Everything changed, when the advertisement nations attacked. In the second part
+of the 2010-s, YouTube became a sophisticated enough platform to
+
