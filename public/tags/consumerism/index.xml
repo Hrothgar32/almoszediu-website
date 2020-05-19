@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>consumerism - Tag - Álmos Zediu</title>
+        <link>http://example.org/tags/consumerism/</link>
+        <description>consumerism - Tag - Álmos Zediu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Tue, 19 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/consumerism/" rel="self" type="application/rss+xml" /><item>
+    <title>Our insatiable need to consume content on YouTube</title>
+    <link>http://example.org/posts/need-to-feed/</link>
+    <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/need-to-feed/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/watching.jpg" referrerpolicy="no-referrer">
+            </div>Every passing day, this corona thing makes me consume more and more online content, in order to avoid facing my responsibilites and pass the time somehow. Our generation (young adults in their late teens, early twenties) praises itself in avoiding the pitfall of television. We argue, that because we opt out of the control of a television network, we control the content we watch and it&rsquo;s not the other way around, which is how the boomers are fooled by their black boxes.]]></description>
+</item></channel>
+</rss>
