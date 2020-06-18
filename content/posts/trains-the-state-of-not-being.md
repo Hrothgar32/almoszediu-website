@@ -1,7 +1,7 @@
 +++
 title = "Trains The State Of Not Being"
 date = 2020-06-17
-lastmod = 2020-06-18T06:55:48+03:00
+lastmod = 2020-06-18T07:38:38+03:00
 tags = ["travel", "philosophy"]
 categories = ["rants"]
 draft = false
@@ -60,7 +60,7 @@ me to be patriotic about the nature of my homeland, because it is truly beautifu
 ## Trains make us perpetual children {#trains-make-us-perpetual-children}
 
 I think I'm drawn to trains because me and my parents used to travel exclusively
-by train when I was little. My didn't see the need for a car, nor were we in the
+by train when I was little. My father didn't see the need for a car, nor were we in the
 situation financially to get one. So we "trained", and boi, I don't really
 regret it! My favourite types of trains were the ones with a second floor. I
 called them "froggy trains" for some reason, and I don't really know why.
