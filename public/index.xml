@@ -4,7 +4,7 @@
         <link>http://example.org/</link>
         <description>My personal website, and blog.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Tue, 19 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
     <title>Our insatiable need to consume content on YouTube</title>
     <link>http://example.org/posts/need-to-feed/</link>
     <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
@@ -31,5 +31,15 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/beginning.jpg" referrerpolicy="no-referrer">
             </div>What&rsquo;s this blog all about To share the love for the one and only OS, Emacs of course. Well, not entirely. It will contain random snippets of thought, both professional and unprofessional, so it will reflect my thoughts on the current state of certain software projects which I discover. In the beginning this going to be a bit self-centered, as it will also be a kind of &ldquo;self-documentation&rdquo; I suppose, but this could change easily.]]></description>
+</item><item>
+    <title>Trains The State Of Not Being</title>
+    <link>http://example.org/posts/trains-the-state-of-not-being/</link>
+    <pubDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/trains-the-state-of-not-being/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/train-cars.jpg" referrerpolicy="no-referrer">
+            </div>Tis strange, but it is certainly true to some extent: being on trains is like being in another plane of existence: it is a separate social place, with ever changing, ever moving background. Because of the vast space it encompasses, it does not feel like a vehicle, it feels like another moving world.
+The Feeling of a New Start Every time I embark on a train trip, I feel like I&rsquo;m going to start my life over, like a hopeful lad who tries he&rsquo;s fortune in the New World.]]></description>
 </item></channel>
 </rss>

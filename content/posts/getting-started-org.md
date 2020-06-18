@@ -1,7 +1,7 @@
 +++
 title = "Getting really started with Org mode."
 date = 2020-05-15
-lastmod = 2020-05-15T16:20:24+03:00
+lastmod = 2020-05-19T11:40:26+03:00
 tags = ["emacs", "org"]
 categories = ["emacs"]
 draft = true

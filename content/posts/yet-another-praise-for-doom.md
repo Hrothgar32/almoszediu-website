@@ -1,7 +1,7 @@
 +++
 title = "Yet another praise for Doom"
 date = 2020-05-14
-lastmod = 2020-05-15T16:13:45+03:00
+lastmod = 2020-05-27T20:17:49+03:00
 tags = ["emacs"]
 categories = ["emacs"]
 draft = true

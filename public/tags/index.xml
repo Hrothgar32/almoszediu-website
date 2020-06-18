@@ -4,7 +4,21 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - Álmos Zediu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Tue, 19 May 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>philosophy</title>
+    <link>http://example.org/tags/philosophy/</link>
+    <pubDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/tags/philosophy/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>travel</title>
+    <link>http://example.org/tags/travel/</link>
+    <pubDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/tags/travel/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>consumerism</title>
     <link>http://example.org/tags/consumerism/</link>
     <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
