@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>travel - Tag - Álmos Zediu</title>
+        <link>http://example.org/tags/travel/</link>
+        <description>travel - Tag - Álmos Zediu</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/travel/" rel="self" type="application/rss+xml" /><item>
+    <title>Trains The State Of Not Being</title>
+    <link>http://example.org/posts/trains-the-state-of-not-being/</link>
+    <pubDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/trains-the-state-of-not-being/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/train-cars.jpg" referrerpolicy="no-referrer">
+            </div>Tis strange, but it is certainly true to some extent: being on trains is like being in another plane of existence: it is a separate social place, with ever changing, ever moving background. Because of the vast space it encompasses, it does not feel like a vehicle, it feels like another moving world.
+The Feeling of a New Start Every time I embark on a train trip, I feel like I&rsquo;m going to start my life over, like a hopeful lad who tries he&rsquo;s fortune in the New World.]]></description>
+</item></channel>
+</rss>
