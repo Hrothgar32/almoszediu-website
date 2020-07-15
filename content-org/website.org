@@ -716,7 +716,7 @@ me your input on this!
 **** Attributions:
 /Thumbnail image: [[https://www.needpix.com/photo/1465915/train-doubledecked-railway-commerce-trains][Train Double decked Railway]], by Linnaea Mallette (Public Domain)/
 * Movie journal :@movie-journal:
-** TODO The Lighthouse :impressions:
+** DONE The Lighthouse :impressions:
 :PROPERTIES:
 :EXPORT_FILE_NAME: the-lighthouse
 :EXPORT_DATE: 2020-07-16

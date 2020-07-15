@@ -4,7 +4,16 @@
         <link>http://example.org/</link>
         <description>My personal website, and blog.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+    <title>The Lighthouse</title>
+    <link>http://example.org/posts/the-lighthouse/</link>
+    <pubDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/the-lighthouse/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/the-lighthouse.jpg" referrerpolicy="no-referrer">
+            </div>This was my first Robert Eggers movie, and I&rsquo;m truly interested in the director&rsquo;s filmography after this. Don&rsquo;t be mistaken, this wasn&rsquo;t a pleasent watch. But just like the curiosity of Tom Howard in this feature, so was mine going further and further into the depths of this beatiful monstrosity. Not because of the intriguing plot, or life-like characters, but because of the somber melancholy and holiness, which perpetrates throughout the film.]]></description>
+</item><item>
     <title>Our insatiable need to consume content on YouTube</title>
     <link>http://example.org/posts/need-to-feed/</link>
     <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
