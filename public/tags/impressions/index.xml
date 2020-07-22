@@ -4,7 +4,7 @@
         <link>http://example.org/tags/impressions/</link>
         <description>impressions - Tag - Álmos Zediu</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/impressions/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/impressions/" rel="self" type="application/rss+xml" /><item>
     <title>The Lighthouse</title>
     <link>http://example.org/posts/the-lighthouse/</link>
     <pubDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</pubDate>
@@ -13,5 +13,16 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/the-lighthouse.jpg" referrerpolicy="no-referrer">
             </div>This was my first Robert Eggers movie, and I&rsquo;m truly interested in the director&rsquo;s filmography after this. Don&rsquo;t be mistaken, this wasn&rsquo;t a pleasent watch. But just like the curiosity of Tom Howard in this feature, so was mine going further and further into the depths of this beatiful monstrosity. Not because of the intriguing plot, or life-like characters, but because of the somber melancholy and holiness, which perpetrates throughout the film.]]></description>
+</item><item>
+    <title>Snowpiercer (2020)</title>
+    <link>http://example.org/posts/snowpiercer/</link>
+    <pubDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/snowpiercer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/pikrepo.com.jpg" referrerpolicy="no-referrer">
+            </div>Bong Joon Ho has definitely brought some fresh and new perspectives into Hollywood, as seen in his latest movie, Parasites, but many of us have known his other great work Snowpiercer, which has also stirred some still waters, back in 2013.
+THIS REVIEW CONTAINS SPOILERS! You have been warned.
+Synopsis The premise is quite unique, and thought provoking, in and on itself: global warming has become so rampant, that the scientists of Earth have decided that the only solution to stopping it is artificially cooling down our planet with the use of a special chemical which they released into the atmosphere.]]></description>
 </item></channel>
 </rss>

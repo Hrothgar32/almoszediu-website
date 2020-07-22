@@ -4,7 +4,7 @@
         <link>http://example.org/</link>
         <description>My personal website, and blog.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
     <title>The Lighthouse</title>
     <link>http://example.org/posts/the-lighthouse/</link>
     <pubDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</pubDate>
@@ -40,6 +40,17 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/beginning.jpg" referrerpolicy="no-referrer">
             </div>What&rsquo;s this blog all about To share the love for the one and only OS, Emacs of course. Well, not entirely. It will contain random snippets of thought, both professional and unprofessional, so it will reflect my thoughts on the current state of certain software projects which I discover. In the beginning this going to be a bit self-centered, as it will also be a kind of &ldquo;self-documentation&rdquo; I suppose, but this could change easily.]]></description>
+</item><item>
+    <title>Snowpiercer (2020)</title>
+    <link>http://example.org/posts/snowpiercer/</link>
+    <pubDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/snowpiercer/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/pikrepo.com.jpg" referrerpolicy="no-referrer">
+            </div>Bong Joon Ho has definitely brought some fresh and new perspectives into Hollywood, as seen in his latest movie, Parasites, but many of us have known his other great work Snowpiercer, which has also stirred some still waters, back in 2013.
+THIS REVIEW CONTAINS SPOILERS! You have been warned.
+Synopsis The premise is quite unique, and thought provoking, in and on itself: global warming has become so rampant, that the scientists of Earth have decided that the only solution to stopping it is artificially cooling down our planet with the use of a special chemical which they released into the atmosphere.]]></description>
 </item><item>
     <title>Trains The State Of Not Being</title>
     <link>http://example.org/posts/trains-the-state-of-not-being/</link>
