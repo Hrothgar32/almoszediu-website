@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - Álmos Zediu</title>
+        <title>Tags - Tag - Álmos blog</title>
         <link>http://example.org/tags/</link>
-        <description>Tags - Tag - Álmos Zediu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+        <description>Tags - Tag - Álmos blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
     <title>impressions</title>
     <link>http://example.org/tags/impressions/</link>
     <pubDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</pubDate>

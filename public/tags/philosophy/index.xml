@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>philosophy - Tag - Álmos Zediu</title>
+        <title>philosophy - Tag - Álmos blog</title>
         <link>http://example.org/tags/philosophy/</link>
-        <description>philosophy - Tag - Álmos Zediu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/philosophy/" rel="self" type="application/rss+xml" /><item>
+        <description>philosophy - Tag - Álmos blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/philosophy/" rel="self" type="application/rss+xml" /><item>
     <title>Trains The State Of Not Being</title>
     <link>http://example.org/posts/trains-the-state-of-not-being/</link>
     <pubDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</pubDate>

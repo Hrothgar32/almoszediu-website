@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>rants - Category - Álmos Zediu</title>
+        <title>rants - Category - Álmos blog</title>
         <link>http://example.org/categories/rants/</link>
-        <description>rants - Category - Álmos Zediu</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>zold.almos@gmail.com (Álmos Zediu)</managingEditor>
-            <webMaster>zold.almos@gmail.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/rants/" rel="self" type="application/rss+xml" /><item>
+        <description>rants - Category - Álmos blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 17 Jun 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/categories/rants/" rel="self" type="application/rss+xml" /><item>
     <title>Our insatiable need to consume content on YouTube</title>
     <link>http://example.org/posts/need-to-feed/</link>
     <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
