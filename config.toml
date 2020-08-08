@@ -68,7 +68,7 @@ theme = "LoveIt"
 [params.social]
 GitHub = "Hrothgar32"
 Linkedin = "álmos-zediu-b538861a9"
-Email = "zold.almos@gmail.com"
+Email = "almer@almoszediu.com"
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 [params.page]
@@ -136,7 +136,7 @@ Email = "zold.almos@gmail.com"
 
 [author]
     name = "Álmos Zediu"
-    email = "zold.almos@gmail.com"
+    email = "almer@almoszediu.com"
 [menu]
   [[menu.main]]
     identifier = "posts"
