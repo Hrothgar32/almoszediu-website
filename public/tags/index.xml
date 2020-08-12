@@ -4,7 +4,14 @@
         <link>http://example.org/tags/</link>
         <description>Tags - Tag - Álmos blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
-            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 12 Aug 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>rant</title>
+    <link>http://example.org/tags/rant/</link>
+    <pubDate>Wed, 12 Aug 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/tags/rant/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>impressions</title>
     <link>http://example.org/tags/impressions/</link>
     <pubDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</pubDate>
@@ -31,13 +38,6 @@
     <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
     <author>Author</author>
     <guid>http://example.org/tags/consumerism/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>rant</title>
-    <link>http://example.org/tags/rant/</link>
-    <pubDate>Tue, 19 May 2020 00:00:00 &#43;0300</pubDate>
-    <author>Author</author>
-    <guid>http://example.org/tags/rant/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>hugo</title>

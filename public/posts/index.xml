@@ -4,7 +4,7 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | Álmos blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
-            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 22 Jul 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 12 Aug 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>The Lighthouse</title>
     <link>http://example.org/posts/the-lighthouse/</link>
     <pubDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</pubDate>
@@ -61,5 +61,14 @@ Synopsis The premise is quite unique, and thought provoking, in and on itself: g
                 <img src="/images/train-cars.jpg" referrerpolicy="no-referrer">
             </div>Tis strange, but it is certainly true to some extent: being on trains is like being in another plane of existence: it is a separate social place, with ever changing, ever moving background. Because of the vast space it encompasses, it does not feel like a vehicle, it feels like another moving world.
 The Feeling of a New Start Every time I embark on a train trip, I feel like I&rsquo;m going to start my life over, like a hopeful lad who tries he&rsquo;s fortune in the New World.]]></description>
+</item><item>
+    <title>Wine and alternative music</title>
+    <link>http://example.org/posts/wine-and-alternative-music/</link>
+    <pubDate>Wed, 12 Aug 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/wine-and-alternative-music/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/wine.jpg" referrerpolicy="no-referrer">
+            </div>I&rsquo;m mainly a beer guy, to be completely honest. There are some situations however, when a good wine could enlighten my spirit in more appropiate ways. That&rsquo;s how it is when listening to Bauhaus, at 2 AM, alone at home. Other times I&rsquo;d feel bad for being a loner like this, but thanks to the internet, and my keyboard, this is not the case. The gloomy, gothic athmosphere blends itself well with the fruitiness of the white Tokaj wine.]]></description>
 </item></channel>
 </rss>
