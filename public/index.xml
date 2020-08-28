@@ -4,7 +4,18 @@
         <link>http://example.org/</link>
         <description>My personal website, and blog.</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
-            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Wed, 12 Aug 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Fri, 28 Aug 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/" rel="self" type="application/rss+xml" /><item>
+    <title>Shredbase (2020-08-28)</title>
+    <link>http://example.org/posts/shredbase-2020-08-28/</link>
+    <pubDate>Fri, 28 Aug 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/shredbase-2020-08-28/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/metal.jpg" referrerpolicy="no-referrer">
+            </div>It&rsquo;s not the first day that I began to work on this project, but this day I felt like I began to see my effort being worthwhile.
+Shredbase is going to be a sort of metal band recommending site, which will base it&rsquo;s recommendation on the r/metal subreddit.
+Challenges Natural language processing Since my recommendations will be based on Reddit comments and posts, I need to find a way to extract this information from the many English text and organize it into links, pictures, names and numerical information.]]></description>
+</item><item>
     <title>The Lighthouse</title>
     <link>http://example.org/posts/the-lighthouse/</link>
     <pubDate>Thu, 16 Jul 2020 00:00:00 &#43;0300</pubDate>
