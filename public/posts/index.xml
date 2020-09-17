@@ -4,7 +4,7 @@
         <link>http://example.org/posts/</link>
         <description>All Posts | Álmos blog</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>almer@almoszediu.com (Álmos Zediu)</managingEditor>
-            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Fri, 28 Aug 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>almer@almoszediu.com (Álmos Zediu)</webMaster><lastBuildDate>Thu, 17 Sep 2020 00:00:00 &#43;0300</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Shredbase (2020-08-28)</title>
     <link>http://example.org/posts/shredbase-2020-08-28/</link>
     <pubDate>Fri, 28 Aug 2020 00:00:00 &#43;0300</pubDate>
@@ -51,6 +51,16 @@ Challenges Natural language processing Since my recommendations will be based on
     <description><![CDATA[<div class="featured-image">
                 <img src="/images/beginning.jpg" referrerpolicy="no-referrer">
             </div>What&rsquo;s this blog all about To share the love for the one and only OS, Emacs of course. Well, not entirely. It will contain random snippets of thought, both professional and unprofessional, so it will reflect my thoughts on the current state of certain software projects which I discover. In the beginning this going to be a bit self-centered, as it will also be a kind of &ldquo;self-documentation&rdquo; I suppose, but this could change easily.]]></description>
+</item><item>
+    <title>Shredbase (2020-09-17)</title>
+    <link>http://example.org/posts/shredbase-2020-09-17/</link>
+    <pubDate>Thu, 17 Sep 2020 00:00:00 &#43;0300</pubDate>
+    <author>Author</author>
+    <guid>http://example.org/posts/shredbase-2020-09-17/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/metal.jpg" referrerpolicy="no-referrer">
+            </div>Well, much has happened since my last dev diary (I have to somehow make more updates about my projects.), and the plans with Shredbase changed quite a bit.
+No to AI Natural language processing seemed like a prime candidate for analyzing comments, but looking at how redditors structure their comments, I had to give up on this idea. Very few of them formulate complete sentences when they&rsquo;re recommending bands to listen to, mostly posting a YouTube link, or writing a short comment with the Band Name - Song Name structure.]]></description>
 </item><item>
     <title>Snowpiercer (2020)</title>
     <link>http://example.org/posts/snowpiercer/</link>

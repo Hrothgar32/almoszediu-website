@@ -59,22 +59,6 @@ started this blog, because I thought it would be fun to document the whole
 process, maybe some fortunate soul will learn from my mistakes.
 * Emacs :@emacs:
 Emacs gang where you at?
-** TODO Getting really started with Org mode. :emacs:org:
-:PROPERTIES:
-:EXPORT_FILE_NAME: getting-started-org
-:EXPORT_DATE: 2020-05-15
-:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "/images/unicorg.jpg"
-:END:
-Time and time again we hear about how ludicrously awesome Org is, and how should
-we use it for everything, from scheduling tasks to taking notes at university
-and the like. Since currently I'm not going back to Uni any time soon, I will
-try mainly to take advantage of the former feature.
-
-*** Agenda and other types of sorcery
-The agenda minibuffer could be called your "productivity hub", since from there
-you can access your tags and TODO's, the former categoryzing your tasks, the
-latter than visualizing them. To bring it up, you type:
-** TODO The story of Spotman :emacs:spotman:
 * Tech tutorials :@tutorials:
 ** DONE Some remarks on Remark42, and how to set it up :hugo:remark:
 :PROPERTIES:
@@ -605,47 +589,6 @@ Stay safe and read something cool!
 
 **** Attributions:
  /Thumbnail image: [[https://www.flickr.com/photos/tcee35mm/41454088142][They Are Watching You]], by [[https://www.flickr.com/photos/tcee35mm/][Tee Cee]] [[https://creativecommons.org/licenses/by/2.0/legalcode][(CC BY 2.0)]]/
-** TODO Video games, interactivity and freedom :rant:
-:PROPERTIES:
-:EXPORT_FILE_NAME: video-games-for-the-win
-:EXPORT_DATE: 2020-05-28
-:END:
-Due to their inherently commercial nature, video games have not enjoyed for many
-years the amount of prestige that movies, and fiction books had and have.  This
-trend has begin in recent years, and that is because video games have reached a
-*threshold maturity-level* fairly quickly.
-*** From tech demo to art
-If we're being honest, every medium which now we take for granted, began it's
-life as a tech demo. There could be made an exception here with cave paintings,
-but I would rescue my argument with [[https://en.wikipedia.org/wiki/Bicameralism_(psychology)][bicameralism]] which will get it's own blog
-post down the line. I would define a medium which can hold art as a deliberate
-and conscious method to create an object of beauty or conveyor of human emotions
-which could of course show our longing for the transcendent or explain our origins for that
-matter.
-
-My main argument here is that the first written records of the Sumerians weren't the
-tales of Gilgames, but rather the discovery, that hey, if we make a system out
-of symbols, and carve it in a rock, we can store information. The cave paintings
-held similar functions initially. The horns made out of bone signaled a
-successful hunt, or scared off animals, and eventually striked fear in the
-hearts of the enemies. These were pragmatic functions, but we humans, are a
-weird bunch of apes, and find new uses for just about every piece of technology
-we use, just for the sake of our amusement or willingness to escape our world.
-
-The tech demo for the video game was of course Pong. There might have been other
-precursors, but I'm not a historian but a mere blogger, and this was to most
-notable. It was released in 1972, and truly revolutionized the world of
-entertainment. By then, the invention of the [[https://en.wikipedia.org/wiki/Cinematography#Film_cinematography][Lumière]] brothers was well regarded
-and prominent, having wonderful artists like Stanley Kubrick, Andrei Tarkovsky
-and Alfred Hitchkock, and music and literature have been shaping the our
-not-so-bicameral minds for milleniums. This unassuming little piece of work
-consisted of two vertical bars, tossing a ball between each other. Hell, I could
-play with cardboard cut-out stick figures today, and it would be more quality
-entertainment, but everything has to start somewhere.
-
-/INSERT PICTURE OF PONG/
-
-The next natural progression were the RPG type games.
 ** DONE Trains The State Of Not Being :travel:philosophy:
 :PROPERTIES:
 :EXPORT_FILE_NAME: trains-the-state-of-not-being
@@ -911,8 +854,8 @@ subjects, was actually compelling, and I'm looking forward to find out info
 about the supply train. It will remain my brain fast-food between binging more
 demanding titles.
 
-* Dev diary :@content_journal:
-** DONE Shredbase (2020-08-28)
+* Dev diary :@development:
+** DONE Shredbase (2020-08-28) :shredbase:webdev:
 :PROPERTIES:
 :EXPORT_FILE_NAME: shredbase-2020-08-28
 :EXPORT_DATE: 2020-08-28
@@ -986,3 +929,67 @@ I've got some things on my plate right know, since I might begin some additional
 projects very soon (some of them for clients), but I'm confident in my abilities
 to realize this fun utility website. I hope it will be of great use to me, and
 other metalheads as well.
+** DONE Shredbase (2020-09-17) :shredbase:webdev:
+:PROPERTIES:
+:EXPORT_FILE_NAME: shredbase-2020-09-17
+:EXPORT_DATE: 2020-09-17
+:EXPORT_HUGO_CUSTOM_FRONT_MATTER: :featuredImage "/images/metal.jpg"
+:END:
+Well, much has happened since my last dev diary (I have to somehow make more
+updates about my projects.), and the plans with Shredbase changed quite a bit.
+
+**** No to AI
+Natural language processing seemed like a prime candidate for analyzing
+comments, but looking at how redditors structure their comments, I had to give
+up on this idea. Very few of them formulate complete sentences when they're
+recommending bands to listen to, mostly posting a YouTube link, or writing a
+short comment with the *Band Name - Song Name* structure. Luckily, I've found
+easier ways to extract band recommendations.
+
+**** The recommendation section
+The way things are now, I simply search for the inputted band name in the
+recommendation tab, extracting YouTube links from the responses using RegEx. The
+only problem right now is that there are too many bands in existence, so I
+haven't made a central database with their name yet, right now every search
+query is made from the ground up.
+This impacts performance right know, and it takes about 5 to 6 seconds to return
+the results. I'm planning to introduce every search query in the database, so
+the same search query will return the results instantly at the second time when
+the band is searched.
+Another problem with this approach is that I simply search for the band name in
+the top level comments, so a comment like "I don't really like Metallica, could
+you guys recommend me something else?" would also return results when the user
+searches for Metallica.
+Since I only extract the YouTube links from the answers, the number of results
+is low when users are searching for not so well known bands. I have to figure
+out an approach to include text-only recommendations as well.
+**** The What Have You Been Listening To section
+The second feature of my website is much more successful right now. Since r/metal
+users are encouraged to explain why they like the band they're talking about, I
+can include this explanation next to the video, which makes a much more familiar
+and interesting experience.
+I parse the comments with the BeatifulSoup library, first searching for words
+which are emphasized in bold, because usually that is how users emphasize their
+listened band and/or songs. Roughly 70-75% of comments are useful, but this
+approach isn't without faults, since sometimes somebody begins their paragraph
+with *Not Metal* and the YouTube video I return is, well... about plastics and
+non-metal elements of the periodic table. If I would have the necessary knowledge and
+computing power to do intelligent text-analyzing, I could filter these comments,
+but I think it's a funny *feature* so to speak.
+Right now, the most recent 100 WHYBLT submissions have been parsed and
+introduced into the database with over 6000 comments, and I have discovered many
+cool underground bands with my own website, which I see as an absolute win!
+**** Plans going forward
+***** Recommendation section
+I might polish the recommendation section a little bit further, so it includes
+more responses, and I have to make database tables for the bands and
+recommendation to cache frequent queries.
+***** WHYBLT section
+I'm going to write a scheduled Python script which parses every sunday that
+weeks WHYBLT submission, so that Shredbase would keep up to date with the weekly
+metal experience.
+***** Hosting
+The current plans for now are that I will host my website on my personal
+media-server, based in Germany. Right now, I don't think I will get much traffic
+for the website, but if this were to change, I might invest in a dedicated VPS
+for it.

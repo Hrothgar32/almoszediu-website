@@ -277,7 +277,7 @@ advice on that.</p>
 sudo pacman -S nginx
 </code></pre></div><p><strong>Shell commands for Fedora-fanatics</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo dnf install nginx
-</code></pre></div><p>Now that the software is fine and dandy, it&rsquo;s time to enable it through good ol&rsquo;
+</code></pre></div><p>Now that the software is fine and dandy, it&rsquo;s time to enable it through good ol'
 systemd:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start nginx
 sudo systemctl enable nginx
@@ -337,44 +337,44 @@ and in the &ldquo;value&rdquo; section you write the public IP address of your s
 <p>First and foremost, you&rsquo;ll need a <strong>docker-compose.yml</strong> file. This basically
 tells Docker what is the base program, and you will provide some details on how
 to set it up. I will provide an example configuration here:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;2&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;2&#39;</span>
 
-<span style="color:#66d9ef">services</span>:
-    <span style="color:#66d9ef">remark</span>:
-        <span style="color:#66d9ef">build</span>: .
-        <span style="color:#66d9ef">image</span>: umputun/remark42:latest
-        <span style="color:#66d9ef">container_name</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
-        <span style="color:#66d9ef">hostname</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
-        <span style="color:#66d9ef">restart</span>: always
+<span style="color:#f92672">services</span>:
+    <span style="color:#f92672">remark</span>:
+        <span style="color:#f92672">build</span>: <span style="color:#ae81ff">.</span>
+        <span style="color:#f92672">image</span>: <span style="color:#ae81ff">umputun/remark42:latest</span>
+        <span style="color:#f92672">container_name</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
+        <span style="color:#f92672">hostname</span>: <span style="color:#e6db74">&#34;remark42&#34;</span>
+        <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">always</span>
 
-        <span style="color:#66d9ef">logging</span>:
-            <span style="color:#66d9ef">driver</span>: json-file
-            <span style="color:#66d9ef">options</span>:
-                <span style="color:#66d9ef">max-size</span>: <span style="color:#e6db74">&#34;10m&#34;</span>
-                <span style="color:#66d9ef">max-file</span>: <span style="color:#e6db74">&#34;5&#34;</span>
+        <span style="color:#f92672">logging</span>:
+            <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">json-file</span>
+            <span style="color:#f92672">options</span>:
+                <span style="color:#f92672">max-size</span>: <span style="color:#e6db74">&#34;10m&#34;</span>
+                <span style="color:#f92672">max-file</span>: <span style="color:#e6db74">&#34;5&#34;</span>
 
         <span style="color:#75715e"># uncomment to expose directly (no proxy)</span>
         <span style="color:#75715e">#ports:</span>
         <span style="color:#75715e">#  - &#34;80:8080&#34;</span>
 
-        <span style="color:#66d9ef">environment</span>:
-            - REMARK_URL=
-            - SECRET=
-            - SITE=
-            - STORE_BOLT_PATH=/srv/var/db
-            - BACKUP_PATH=/srv/var/backup
-            - DEBUG=<span style="color:#66d9ef">true</span>
-            - AUTH_GOOGLE_CID
-            - AUTH_GOOGLE_CSEC
-            - AUTH_GITHUB_CID=
-            - AUTH_GITHUB_CSEC=
-            - AUTH_FACEBOOK_CID
-            - AUTH_FACEBOOK_CSEC
-            - AUTH_DISQUS_CID
-            - AUTH_DISQUS_CSEC
+        <span style="color:#f92672">environment</span>:
+            - <span style="color:#ae81ff">REMARK_URL=</span>
+            - <span style="color:#ae81ff">SECRET=</span>
+            - <span style="color:#ae81ff">SITE=</span>
+            - <span style="color:#ae81ff">STORE_BOLT_PATH=/srv/var/db</span>
+            - <span style="color:#ae81ff">BACKUP_PATH=/srv/var/backup</span>
+            - <span style="color:#ae81ff">DEBUG=true</span>
+            - <span style="color:#ae81ff">AUTH_GOOGLE_CID</span>
+            - <span style="color:#ae81ff">AUTH_GOOGLE_CSEC</span>
+            - <span style="color:#ae81ff">AUTH_GITHUB_CID=</span>
+            - <span style="color:#ae81ff">AUTH_GITHUB_CSEC=</span>
+            - <span style="color:#ae81ff">AUTH_FACEBOOK_CID</span>
+            - <span style="color:#ae81ff">AUTH_FACEBOOK_CSEC</span>
+            - <span style="color:#ae81ff">AUTH_DISQUS_CID</span>
+            - <span style="color:#ae81ff">AUTH_DISQUS_CSEC</span>
             <span style="color:#75715e"># - ADMIN_PASSWD=password</span>
-        <span style="color:#66d9ef">volumes</span>:
-            - ./var:/srv/var
+        <span style="color:#f92672">volumes</span>:
+            - <span style="color:#ae81ff">./var:/srv/var</span>
 </code></pre></div><p>You can leave most of these alone, but you <strong>have to</strong> give values to some
 of these options:</p>
 <ul>

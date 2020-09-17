@@ -1,7 +1,8 @@
 +++
 title = "Shredbase (2020-08-28)"
 date = 2020-08-28
-lastmod = 2020-08-28T23:44:41+03:00
+lastmod = 2020-09-06T19:31:28+03:00
+categories = ["development"]
 draft = false
 weight = 2001
 featuredImage = "/images/metal.jpg"
